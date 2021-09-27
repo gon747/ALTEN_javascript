@@ -1,0 +1,30 @@
+:root{
+    --txt1: #fff;
+    --bg1: #222;
+}
+body{
+    background: var(--bg1);
+    color: var(--txt1);
+}
+a, a:link, a:visited, a:hover, a:active{
+  outline: none !important;
+  text-decoration: none;
+}
+
+#box2{
+  width: 300px;
+  height: 50px;
+  background-color: #00f;
+}
+
+.titoli1{
+  color: #45bd4f;
+}
+
+.font40{
+  font-size: 8rem;
+}
+
+.btn-danger{
+  background-color: #45bd4f;
+}
