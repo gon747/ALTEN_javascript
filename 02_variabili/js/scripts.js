@@ -50,7 +50,8 @@ let b = 10;
 let z = 2;
 
 
-let f = ( a == b || b == z ) ? "verdadero" : "falso";
+// let f = ( a == b || b == z ) ? "verdadero" : "falso";
+let f = ( a == b && b == z ) ? "verdadero" : "falso";
 
 // and (&&) - or(||)
 
