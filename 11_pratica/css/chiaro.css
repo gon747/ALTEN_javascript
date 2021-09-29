@@ -1,0 +1,19 @@
+body{
+    background-color: #fff;
+    color: #222;
+}
+
+#box_form{
+    width: 70%;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#timer{
+    color: #f00;
+    font-size: 4rem;
+    border: #222 1px solid;
+    padding: 10px;
+    width: 200px;
+}

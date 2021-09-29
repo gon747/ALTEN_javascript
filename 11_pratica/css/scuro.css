@@ -1,0 +1,11 @@
+body{
+    background-color: #222;
+    color: #fff;
+}
+
+#box_form{
+    width: 70%;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}

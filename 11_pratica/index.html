@@ -7,42 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel='stylesheet' href='css/styles.css'>
+    <link id="stilo" rel='stylesheet' href='css/chiaro.css'>
 </head>
 <body>
 
     <div class="container">
         <div id="app">
-            <form action="" style="width: 200px;">
-                <div class="mb-3">
-                    
-                    <input type="text" class="form-control" id="val1" >
-                </div>
-                <div class="mb-3">
-                    
-                    <input type="text" class="form-control" id="val2" >
-                </div>
-
-                <button id="btn_calc" type="button" class="btn btn-primary">Calcola</button>
-
-
-            </form>
-        </div>
-        <hr>
-        <div id="res">
-            
-        </div>
-
-        <div id="box1">
-            <div id="box2"></div>
-        </div>
-        <hr>
-        <div id="menu">
-            <button class="btn btn-danger" id="btn1">BTN 1</button>
-            <button class="btn btn-danger" id="btn2">BTN 2</button>
-            <button class="btn btn-danger" id="btn3">BTN 3</button>
+            <h1>Pratica</h1>
+            <div id="box-btn-tema" class="form-check form-switch">
+                <input  class="form-check-input" type="checkbox" id="btn_tema">
+                <label class="form-check-label" for="btn-tema">Tema Scuro</label>
+            </div>
         </div>
     </div>
+
+    <div class="container">
+        <hr>
+        <div id="timer">00</div>
+
+    </div>
+
+    <div id="menu">
+        <div id="box_form">
+            <form>
+                <div class="mb-3">
+            
+                    <input type="text" class="form-control" id="txt_tempo" name="text1">
+                </div>
+                <button id="btn_inizia" class="btn btn-danger">INIZIA</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <div id="btn_ac">APRI</div>
+
+   
   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>   
