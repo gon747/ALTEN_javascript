@@ -1,0 +1,53 @@
+:root{
+    --txt1: #fff;
+    --bg1: #222;
+}
+body{
+    background: var(--bg1);
+    color: var(--txt1);
+}
+a, a:link, a:visited, a:hover, a:active{
+  outline: none !important;
+  text-decoration: none;
+}
+
+#box1{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #0f0;
+}
+#box2{
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  background: #111cb8;
+}
+#box3{
+  position: relative;
+  left: 20px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  background: #e7891d;
+}
+
+#box4{
+  position: sticky;
+  top: 0px;
+  height: 50px;
+  background: #111cb8;
+  z-index: 1000000;
+}
+
+#box5{  
+  position: relative;
+  height: 50px;
+  background: #a01745;
+  z-index: 10000000;
+}
+
+#sep{
+  height: 2000px;
+}
