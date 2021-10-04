@@ -32,24 +32,12 @@ btn_add.addEventListener('click', (e)=>{
         frm_dati.reset();
         txt_cf.style.background = "#fff";
     }else{
-        // if(cf){
-        //     if(!ccf){
-        //         alert('CF ripetuto');
-        //     }else{
-        //         alert('Mancano dati');
-        //     }
-        // }else{                       
-        //     alert('CF Obigatori');
-        //     txt_cf.focus();
-        //     txt_cf.style.background = "#f00";
-        // }
-        switch (false) {
-            case value:
-                
-                break;
-        
-            default:
-                break;
+        if(!ccf){
+            alert('CF Ripetuto');
+            txt_cf.focus();
+            txt_cf.select();
+        }else{
+            alert('Tutti i dati sono obbligatori');
         }
     }
 });
