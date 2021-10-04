@@ -1,0 +1,28 @@
+:root{
+    --txt1: #fff;
+    --bg1: #222;
+}
+body{
+    background: var(--bg1);
+    color: var(--txt1);
+}
+a, a:link, a:visited, a:hover, a:active{
+  outline: none !important;
+  text-decoration: none;
+}
+
+#sep{
+  height: 2000px;
+  
+}
+#val_scroll{
+  position: sticky;
+  top: 10px;
+}
+
+#btn_up{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+}

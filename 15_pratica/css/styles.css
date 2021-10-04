@@ -1,0 +1,38 @@
+:root{
+    --txt1: #fff;
+    --bg1: #222;
+}
+body{
+    background: var(--bg1);
+    color: var(--txt1);
+}
+a, a:link, a:visited, a:hover, a:active{
+  outline: none !important;
+  text-decoration: none;
+}
+
+
+#tbl_1{
+  width: 100%;
+  
+}
+#tbl_1 tr,th{
+  border-bottom: #fff 1px solid;
+
+}
+#box_form{
+  padding-right: 100px;
+}
+#tbl_1>tbody tr:nth-child(even){ 
+    background: #221b1b;
+}
+#tbl_1>tbody tr:nth-child(odd){ 
+    background: #373738;
+}
+#tbl_1 tr:hover{
+  background: #fff;
+}
+.btn_elim{
+  color: #da3535;
+  cursor: pointer;
+}
