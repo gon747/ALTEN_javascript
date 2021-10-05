@@ -25,7 +25,7 @@ btn_add.addEventListener('click', (e)=>{
             <td>${cognome}</td>
             <td>${cf}</td>
             <td><i class="fas fa-trash-alt btn_elim" onclick="this.parentNode.parentNode.remove()"></i></td>
-            <td><i class="fas fa-pencil-alt btn_elim"></i></td>
+            <td><i class="fas fa-pencil-alt btn_elim" onclick="modifica(this)"></i></td>
         `;
         tr.innerHTML = n_utente;
         tbody.appendChild(tr);
@@ -65,3 +65,46 @@ if(arr2.includes(cf)){
 }
 
 }
+let nn;
+let modal = new bootstrap.Modal(document.getElementById('mod_cambio'));
+function modifica(el){
+    nn = el.parentNode.parentNode;
+    document.getElementById('c_nome'). value = nn.children[0].innerHTML;
+    document.getElementById('c_cognome'). value = nn.children[1].innerHTML;
+    document.getElementById('c_cf'). value = nn.children[2].innerHTML;
+    modal.show();    
+}
+
+let btn_cambia = document.getElementById('btn_cambia');
+
+btn_cambia.addEventListener('click', ()=>{
+    let nome = document.getElementById('c_nome').value;
+    let cognome = document.getElementById('c_cognome').value;
+    let cf = document.getElementById('c_cf').value;
+
+    let ccf = controlaCF(cf);
+    if(nome && cognome && cf && ccf){
+    let n_utente = `
+            <td>${nome}</td>
+            <td>${cognome}</td>
+            <td>${cf}</td>
+            <td><i class="fas fa-trash-alt btn_elim" onclick="this.parentNode.parentNode.remove()"></i></td>
+            <td><i class="fas fa-pencil-alt btn_elim" onclick="modifica(this)"></i></td>
+        `;
+        let tr = document.createElement('tr');
+        tr.innerHTML = n_utente;
+        nn.parentNode.replaceChild(tr,nn);
+    modal.hide();
+}else{
+    if(!ccf){
+        alert('CF Ripetuto');
+        txt_cf.focus();
+        txt_cf.select();
+    }else{
+        alert('Tutti i dati sono obbligatori');
+    }
+}
+
+})
+
+
