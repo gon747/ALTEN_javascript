@@ -1,0 +1,25 @@
+:root{
+    --txt1: #fff;
+    --bg1: #222;
+}
+body{
+    background: var(--bg1);
+    color: var(--txt1);
+}
+a, a:link, a:visited, a:hover, a:active{
+  outline: none !important;
+  text-decoration: none;
+}
+
+.table{
+  color: #fff;
+}
+
+.table tr{
+  cursor: pointer;
+  
+}
+.table tr:hover{
+  color: #0f0;
+  
+}

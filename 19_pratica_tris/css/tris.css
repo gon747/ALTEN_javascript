@@ -1,0 +1,98 @@
+:root{
+    --txt1: #fff;
+    --bg1: #222;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;    
+}
+body, html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: var(--bg1);
+    color: var(--txt1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+a, a:link, a:visited, a:hover, a:active{
+  outline: none !important;
+  text-decoration: none;
+}
+
+.dp-container {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn{
+    padding: 10px;
+    font-size:0.9rem;
+    border: none;
+    border-radius: 0px;
+    background: #7fc70c;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #416605;
+}
+#top{
+    display: flex;
+    justify-content: space-between;
+}
+
+#btns{
+    align-self: center;
+}
+
+#app{
+    display: flex;
+    
+}
+
+#fondo{
+    width: 450px;
+    height:450px;
+    background: #ccc;
+}
+.caselle{
+    background: #222;
+    width: 148px;
+    height: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ficheO{
+    width: 120px;
+    height: 120px;
+    border: 10px solid #f00;
+    border-radius: 50%;
+}
+.ficheX {
+    width: 120px;
+    height: 10px;
+    background: #0f0;
+    transform: rotate(45deg);
+}
+ .ficheX>div{
+    width: 120px;
+    height: 10px;
+    background: #0f0;
+    transform: rotate(90deg);
+}
+#tavolo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    grid-template-rows: repeat(3 , 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+}
+
+#info_partita{
+    padding-left: 100px;
+}

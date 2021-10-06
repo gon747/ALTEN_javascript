@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://res.webserver.ar/img/dn_ico.png' rel='shortcut icon' type='image/png'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIS</title>
+    
+    <link rel='stylesheet' href='css/tris.css'>
+</head>
+<body>
+
+    <div class="dp-container">
+        <div id="top">
+            <h1>TRIS 1.0.0</h1>
+            <div id="btns">
+                <button id="btn_nuova" class="btn">NUOVA PARTITA</button>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div id="app">
+
+            <div id="fondo">
+                <div id="tavolo">
+                    <div id="c1" class="caselle" data-casella="0" data-ocupata="0"></div>
+                    <div id="c2" class="caselle" data-casella="1" data-ocupata="0"></div>
+                    <div id="c3" class="caselle" data-casella="2" data-ocupata="0"></div>
+                    <div id="c4" class="caselle" data-casella="3" data-ocupata="0"></div>
+                    <div id="c5" class="caselle" data-casella="4" data-ocupata="0"></div>
+                    <div id="c6" class="caselle" data-casella="5" data-ocupata="0"></div>
+                    <div id="c7" class="caselle" data-casella="6" data-ocupata="0"></div>
+                    <div id="c8" class="caselle" data-casella="7" data-ocupata="0"></div>
+                    <div id="c9" class="caselle" data-casella="8" data-ocupata="0"></div>
+                </div>
+            </div>
+
+            <div id="info_partita">
+                <h1>Turno giocatore: <span id="turno"></span></h1>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    
+    <script src='js/tris.js' charset='utf-8'></script>
+</body>
+</html>
