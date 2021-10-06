@@ -96,3 +96,7 @@ a, a:link, a:visited, a:hover, a:active{
 #info_partita{
     padding-left: 100px;
 }
+
+#btn_gioca_ancora{
+    display: none;
+}

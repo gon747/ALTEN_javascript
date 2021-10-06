@@ -1,16 +1,20 @@
-let valCaselle = [0,0,0,0,0,0,0,0,0,];
+let valCaselle = [0,0,0,0,0,0,0,0,0];
+
 let inGioco = false;
 let numGiocata = 0;
 let turnoGiocatore = 1;
 let vincitore = 0;
 
+let giocatore_1;
+let giocatore_2;
+
 let ficheO = `
 <div class="ficheO" data-ocupata="1"></div>
 `;
 let ficheX = `
-<div class="ficheX" data-ocupata="1"><div></div></div>
+<div class="ficheX" data-ocupata="1"><div data-ocupata="1"></div></div>
 `;
-
+document.querySelector('#btn_gioca_ancora').addEventListener('click', nuovaPartita);
 document.querySelector('#btn_nuova').addEventListener('click', nuovaPartita);
 let tavolo = document.querySelector('#tavolo');
 let turno = document.querySelector('#turno');
@@ -31,13 +35,18 @@ tavolo.addEventListener('click', (e)=>{
         }  
         numGiocata++;
         let casella = parseInt(e.target.dataset.casella);
+
         valCaselle[casella] = valCasella;
+
+
         e.target.innerHTML = fiche;
-        e.target.dataset.casella = 1;
+        e.target.dataset.ocupata = 1;
         controllaVincitore();
+       
     }   
     
 });
+
 
 
 function controllaVincitore(){
@@ -68,7 +77,8 @@ function controllaVincitore(){
         }
     });
     if(inGioco){
-        turno.innerHTML = turnoGiocatore;
+        let gx = turnoGiocatore == 1 ? giocatore_1 : giocatore_2;
+        turno.innerHTML = gx;
     }
 
 }
@@ -82,13 +92,29 @@ function chiudiPartita(){
     });
 
 }
-function nuovaPartita(){
+
+
+function nuovaPartita(e){
+    let x = e.target.id;
+    if(x == "btn_nuova"){
+        giocatore_1 = prompt("Nome giocatore 1");
+        giocatore_1 = giocatore_1 == "" ? prompt("Nome giocatore 1") : "";
+        giocatore_2 = prompt("Nome giocatore 2");
+        giocatore_2 = giocatore_2 == "" ? prompt("Nome giocatore 2") : "";
+        document.querySelector('#btn_gioca_ancora').style.display = "inline-block";
+    }
+
+    
+
     chiudiPartita();
-    turnoGiocatore = 1;
+    turnoGiocatore = giocatore_1;
     turno.innerHTML = turnoGiocatore;
     let cc = document.querySelectorAll('#tavolo>div');
     cc.forEach((e)=>{
         e.innerHTML = "";
+        e.dataset.ocupata = 0;
     });
     inGioco = true;
+    
 }
+
