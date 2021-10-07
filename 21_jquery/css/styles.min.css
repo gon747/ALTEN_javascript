@@ -1,0 +1,1 @@
+:root{--txt1:#fff;--bg1:#222}body{background:var(--bg1);color:var(--txt1)}a,a:active,a:hover,a:link,a:visited{outline:0!important;text-decoration:none}#box1{width:300px;height:50px;background:red;display:none}#box2{position:relative;width:80px;height:80px;background:red;border-radius:50%}

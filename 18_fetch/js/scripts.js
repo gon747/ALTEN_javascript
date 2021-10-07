@@ -20,9 +20,9 @@ document.getElementById('btn_carica').addEventListener('click', ()=>{
     });
 });
 
-
+let tbl1 = document.getElementById('tbl1');
 function creaListaUtenti(jj){
-    let tabella = `<table class='table'>`;
+    let tabella = "";
     jj.forEach(el => {
         tabella += `
             <tr onclick="caricaUtente(${el.id})">
@@ -32,8 +32,8 @@ function creaListaUtenti(jj){
             </tr>        
         `
     });
-    tabella += `</table>`;
-    app.innerHTML = tabella;
+    app.innerHTML = "";
+    tbl1.innerHTML = tabella;
 }
 
 function caricaUtente(id){
@@ -62,6 +62,25 @@ function creaSchedaUtente(ut){
     
     
     `
+    tbl1.innerHTML = "";
     app.innerHTML = scheda;
 }
 
+
+
+$(document).ready(function() {
+   
+$(document).ready(function () {
+    $("#txt_cerca").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#tbl1 tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+
+
+
+
+
+});
